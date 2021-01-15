@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src= "02-Homework/Assets/script.js"></script>
+
+</head>
+<body>
+    
+    
+    <section class="hero is-dark">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="title">
+              Weather Dashboard
+            </h1>
+          </div>
+        </div>
+      </section> 
+      <div class="columns">
+      <aside class="menu is-tab is-one-fifth m-2 p-2">
+          <form id="city-form">
+        <input id = "city-input" class="input is-rounded" type="text" placeholder="Search for a City:"><br>
+        <input id="select-artist" type="submit" value="GO!">
+    </form>
+        <p class="menu-label">
+          Popular Cities
+        </p>
+        <ul class="menu-list">
+          <li><a class = "austin" href="https://openweathermap.org/city/4887398">Austin</a></li>
+          <li><a class = "Chicago">Chicago</a></li>
+          <li><a>New York</a></li>
+          <li><a>Orlando</a></li>
+          <li><a>San Francisco</a></li>
+          <li><a>Seattle</a></li>
+          <li><a>Denver</a></li>
+          <li><a>Atlanta</a></li>
+        </ul>
+      </aside> 
+       <div class = "is-four-fifths">
+      <section class="section">
+            <div class="container">
+              <h1 class="title citySearch"></h1>
+              <h2 id= "todaysDate" class="subtitle todaysDate">
+              </h2>
+              <img class= "weathericon" src = "">
+            </div>
+            </div>
+          </section>
+      </div> 
+      <!-- end of columns -->
+    <section>
+        <section class="section">
+            <div class="container">
+              <h1 class="title">5-day Forecast:</h1>
+            </div>
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                  <article class="tile is-child box">
+                   <p class="title"></p> 
+                   <figure class="image is-2by1"></figure>
+                    <p class="subtitle">Subtitle</p>
+                    <div class ="content"></div>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child box">
+                    <p class="title">Two</p>
+                    <figure class="image is-1by1">
+                        <!-- <img src=""> -->
+                    </figure>
+                    <p class="subtitle">Subtitle</p>
+                    <div class ="content">abc</div>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child box">
+                    <p class="title">Three</p></figure>  
+                    <figure class="image is-2by1">
+                    <p class="subtitle">Subtitle</p>
+                    <div class ="content"></div>
+                </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child box">
+                    <p class="title">Four</p>
+                    <figure class="image is-2by1"></figure>
+                    <p class="subtitle">Subtitle</p>
+                    <div class ="content"></div>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                      <p class="title">Five</p>
+                      <figure class="image is-2by1"></figure>
+                      <p class="subtitle">Subtitle</p>
+                      <div class ="content"></div>
+                    </article>
+                  </div>
+              </div>
+          </section>
+    </section>
+    <!-- data will be dumped here -->
+    <div class="city"></div>
+    <div class="date"></div>   
+    <div class="icon"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="humidity"></div>
+    <div class="wind"></div>
+    <div class="UV"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    // var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=166a433c57516f51dfab1f7edaed8413";
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // })
+    // .then(function(reponse){
+    //     console.log(reponse);
+    //     // console.log("date" + response.list[1].dt_txt);
+    //     var cityOutput = $(".citySearch").append(response.city.name);
+    //     var todaysDate = 
+
+
+
+        
+    //     $(".cityresults").append( response.name );
+    //     $(".wind").text("Wind Speed: " + response.wind.speed);
+    //     $(".humidity").text("Humidity: " + response.main.humidity);
+    // });
+
+
+    </script>
+</body>
+</html>
