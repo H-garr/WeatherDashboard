@@ -59,10 +59,10 @@ function fivedayforcast(city){
                 
             }
             $("#fiveday").html(htmlcode)
-            // console.log("date" + response.list[1].dt_txt);
-            // var cityOutput = $(".city").append(response.city.name);
-            // $(".wind").text("Current Wind Speed: " + response.wind.speed);
-            // $(".humidity").text("Current Humidity: " + response.main.humidity);
+            var searchhistory = JSON.parse(localStorage.getItem("citiez")) || []
+            searchhistory.push(citiez)
+            localStorage.setItem("citiez",JSON.stringify(searchhistory));
+            console.log(searchhistory,"Local");
         });
 }
 
