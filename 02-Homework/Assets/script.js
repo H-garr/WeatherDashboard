@@ -20,15 +20,6 @@ $(document).ready(function () {
                    </article>
                  </div>`
                  $("#currentday").html(htmlcode);
-                // console.log("date" + response.list[0].dt_txt);
-                // var cityOutput = $(".citySearch").append(response.city.name);
-                // // $(".todaysDate").append("Todays Date"(moment().format('MMMM Do,')));
-                // // $(".todaysDate").append("Todays Date"(moment().format('MMMM Do,')));
-                // $(".div,.section,.div,.h2").text("Todays Date");
-                // $(".icon")
-                // var iconpic = response.list[0].weather[0].icon;
-                // var iconurl = "http://openweathermap.org/img/w/" + iconpic + ".png"
-                // $(".weathericon")
             });
 
 }
