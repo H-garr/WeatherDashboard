@@ -6,7 +6,7 @@ $(document).ready(function () {
                 method: "GET"
             })
             .then(function (response) {
-                console.log(response);
+                
                 var htmlcode = `
                 <div class="tile is-parent ">
                    <article class="tile is-child box">
@@ -31,7 +31,6 @@ function fivedayforcast(city){
         method: "GET"
     })
         .then(function (response) {
-            console.log(response);
             var forcast = response.list
             var htmlcode = "";
             for (let index = 0; index < forcast.length; index=index+8) {
@@ -60,7 +59,7 @@ function fivedayforcast(city){
 $("#city-form").on("submit", function (event) {
     event.preventDefault()
     var userinput = $("#city-input").val()
-    console.log(userinput)
+    // console.log(userinput)
     fivedayforcast(userinput);
     currentforcast(userinput);
 })
