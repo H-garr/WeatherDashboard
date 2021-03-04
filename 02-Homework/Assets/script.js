@@ -13,9 +13,9 @@ $(document).ready(function () {
                     <p class="title">${response.name}</p> 
                     <figure class="image is-2by1"><img src='https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png'></figure>
                      <p class="subtitle">${response.weather[0].main}</p>
-                     <p> wind:${response.wind.speed}</p>
-                     <p>Temperature:${response.main.temp}</p>
-                     <p>Temperature:${response.main.humidity}</p>
+                     <p> wind:${response.wind.speed} MPH</p>
+                     <p>Temperature:${response.main.temp}°F</p>
+                     <p>Humiditiy:${response.main.humidity}</p>
                      <div class ="content"></div>
                    </article>
                  </div>`
@@ -50,16 +50,16 @@ function fivedayforcast(city){
                    <p class="title">${forcast[index].dt_txt}</p> 
                    <figure class="image is-2by1"><img src='https://openweathermap.org/img/wn/${forcast[index].weather[0].icon}@2x.png'></figure>
                     <p class="subtitle">${forcast[index].weather[0].main}</p>
-                    <p> wind:${forcast[index].wind.speed}</p>
-                    <p>Temperature:${forcast[index].main.temp}</p>
-                    <p>Temperature:${forcast[index].main.humidity}</p>
+                    <p> wind:${forcast[index].wind.speed} MPH</p>
+                    <p>Temperature:${forcast[index].main.temp}°F</p>
+                    <p>Humidity:${forcast[index].main.humidity}</p>
                     <div class ="content"></div>
                   </article>
                 </div>`
                 
             }
             $("#fiveday").html(htmlcode)
-            var searchhistory = JSON.parse(localStorage.getItem("citiez")) || []
+            var searchhistory = JSON.parse(window.localStorage.getItem("citiez")) || []
             searchhistory.push(citiez)
             localStorage.setItem("citiez",JSON.stringify(searchhistory));
             console.log(searchhistory,"Local");
