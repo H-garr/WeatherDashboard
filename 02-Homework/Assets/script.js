@@ -53,7 +53,6 @@ function fivedayforcast(city){
             var searchhistory = JSON.parse(window.localStorage.getItem("citiez")) || []
             searchhistory.push(citiez)
             localStorage.setItem("citiez",JSON.stringify(searchhistory));
-            console.log(searchhistory,"Local");
         });
 }
 
