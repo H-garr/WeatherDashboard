@@ -101,18 +101,19 @@ currentforcast("Minneapolis");
                 if(response.value < 2) {
                     $("#uv").addClass("low")
                     $("#uv").html(response.value)
+                    $("#uv").html(response.value  + " : low")
                 }else if(response.value < 5){
                     $("#uv").addClass("is-primary")
                     $("#uv").html(response.value  + " : moderate")
                 }else if(response.value < 7){
                     $("#uv").addClass("high")
-                    $("#uv").html(response.value)
+                    $("#uv").html(response.value + " : high")
                 }else if(response.value < 10){
                     $("#uv").addClass("is-danger")
-                    $("#uv").html(response.value)
+                    $("#uv").html(response.value + " : very high")
                 }else{
                     $("#uv").addClass("extreme")
-                    $("#uv").html(response.value + " : Extreme")
+                    $("#uv").html(response.value + " : Extreme!")
                 }
             });
         
