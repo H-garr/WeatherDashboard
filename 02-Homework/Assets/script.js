@@ -20,6 +20,9 @@ $(document).ready(function () {
                             </article>
                             </div>`
                 $("#currentday").html(htmlcode);
+                var lat = response.coord.lat;
+                var lon = response.coord.lon;
+                uvindex(lat,lon);
             });
 
     }
@@ -85,4 +88,33 @@ currentforcast("Minneapolis");
         fivedayforcast(city);
         currentforcast(city);
     })
+    function uvindex(lat,lon) {
+        
+        var queryURL = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=166a433c57516f51dfab1f7edaed8413&units=imperial`;
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+            .then(function (response){
+                // console.log(response);
+            
+                if(response.value < 2) {
+                    $("#uv").addClass("low")
+                    $("#uv").html(response.value)
+                }else if(response.value < 5){
+                    $("#uv").addClass("is-primary")
+                    $("#uv").html(response.value  + " : moderate")
+                }else if(response.value < 7){
+                    $("#uv").addClass("high")
+                    $("#uv").html(response.value)
+                }else if(response.value < 10){
+                    $("#uv").addClass("is-danger")
+                    $("#uv").html(response.value)
+                }else{
+                    $("#uv").addClass("extreme")
+                    $("#uv").html(response.value + " : Extreme")
+                }
+            });
+        
+    }
 })
